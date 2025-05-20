@@ -1,9 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Gabarito", ...defaultTheme.fontFamily.sans],
+        title: ["Outfit", ...defaultTheme.fontFamily.sans],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -18,7 +24,7 @@ export default {
         lightTextHeading: "#2E2E2E",
         lightTextBody: "#4E4E4E",
         lightTextLabel: "#6E6E6E",
-        accentBackground: "#0A3FC2",
+        brandBackground: "#0A3FC2",
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
