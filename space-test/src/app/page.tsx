@@ -5,6 +5,7 @@ export default function Home() {
     <div className="bg-black">
       <h1 className="text-lg text-pink-400"> Hsasdas</h1>
       <Button>TEST</Button>
+      <Button>TEST</Button>
     </div>
   );
 }
