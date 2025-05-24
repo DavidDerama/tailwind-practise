@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <Main>
-        <Content className="flex flex-col lg:flex-row gap-[250px] pt-[289px]">
+        <Content className="flex flex-col lg:flex-row items-center lg:items-end gap-[66px] lg:gap-0 lg:justify-between">
           <div className="max-w-[540px] flex flex-col gap-6">
             <h1 className="flex flex-col gap-6 text-center text-9xl lg:text-start">
               <span className="text-2xl text-accentBackground">
@@ -24,7 +24,10 @@ export default function Home() {
               this world experience!
             </p>
           </div>
-          <Button size={"lg"} className="rounded-full size-[272px] text-3xl">
+          <Button
+            size={"lg"}
+            className="mx-auto text-4xl rounded-full lg:mx-0 size-48 lg:size-64 font-title"
+          >
             <Link href=".">Explore</Link>
           </Button>
         </Content>

@@ -9,7 +9,10 @@ type ContentProps = {
 export default function Content({ children, className }: ContentProps) {
   return (
     <section
-      className={cn("max-w-[1100px] mx-auto h-full mb-[128px]", className)}
+      className={cn(
+        "w-full max-w-[1100px] mx-auto pb-[128px] px-10 xl:px-0 lg:h-[632px]",
+        className
+      )}
     >
       {children}
     </section>
