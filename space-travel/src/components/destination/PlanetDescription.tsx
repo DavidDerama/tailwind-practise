@@ -11,7 +11,7 @@ export default function PlanetDescription({ slug }: PlanetTextProps) {
     ? contentData[0].description
     : contentData.find((item) => item.name.toLowerCase() === slug)?.description;
   return (
-    <p className="text-center text-accentBackground lg:text-left">
+    <p className="text-center text-accentColor lg:text-left">
       {descriptionText}
     </p>
   );

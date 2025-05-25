@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import PlanetDisplay from "./PlanetDisplay";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import PlanetDescription from "./PlanetDescription";
 import PlanetTravel from "./PlanetTravel";
 
@@ -9,19 +9,19 @@ type PlanetInfoDisplayProps = {
 };
 
 const links = [
-  { id: 1, label: "moon", src: "/destination", pathName: "/" },
-  { id: 2, label: "mars", src: "/destination/mars", pathName: "mars" },
-  { id: 3, label: "europa", src: "/destination/europa", pathName: "europa" },
-  { id: 4, label: "titan", src: "/destination/titan", pathName: "titan" },
+  { id: 1, label: "moon", src: "/destination" },
+  { id: 2, label: "mars", src: "/destination/mars" },
+  { id: 3, label: "europa", src: "/destination/europa" },
+  { id: 4, label: "titan", src: "/destination/titan" },
 ];
 export default function PlanetInfoDisplay({ slug }: PlanetInfoDisplayProps) {
-  const linkEl = links.map(({ id, label, pathName, src }) => {
+  const linkEl = links.map(({ id, label, src }) => {
     return (
       <li
         key={id}
         className={cn(
-          "border-b-2 border-transparent pb-3 text-accentBackground",
-          (pathName === slug || (!slug && label === "moon")) &&
+          "border-b-2 border-transparent pb-3 text-accentColor hover:border-white",
+          (label === slug || (!slug && label === "moon")) &&
             "border-white text-light"
         )}
       >
@@ -35,7 +35,7 @@ export default function PlanetInfoDisplay({ slug }: PlanetInfoDisplayProps) {
   return (
     <div className="flex flex-col h-full gap-0 lg:flex-row lg:gap-8">
       <PlanetDisplay slug={slug} />
-      <div className="flex flex-col items-start lg:items-start justify-center h-full gap-10 lg:px-[47px] mx-auto lg:mx-0 max-w-[500px]">
+      <div className="flex flex-col items-start justify-center h-full gap-10 lg:px-[47px] mx-auto lg:mx-0 max-w-[500px]">
         <nav className="mx-auto lg:mx-0">
           <ul className="flex gap-8">{linkEl}</ul>
         </nav>

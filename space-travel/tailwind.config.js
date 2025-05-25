@@ -18,7 +18,7 @@ export default {
       colors: {
         dark: "hsl(230, 35%, 7%)",
         light: "hsl(0, 0%, 100%)",
-        accentBackground: "hsl(231, 77%, 90%)",
+        accentColor: "hsl(231, 77%, 90%)",
 
         darkTextHeading: "#E2E2E2",
         darkTextBody: "#C2C2C2",

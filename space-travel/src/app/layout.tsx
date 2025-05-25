@@ -1,14 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Barlow,
-  Barlow_Condensed,
-  Bellefair,
-  Gabarito,
-  Geist,
-} from "next/font/google";
+import { Barlow, Barlow_Condensed, Bellefair } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/Header";
+import { ViewTransitions } from "next-view-transitions";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,14 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${bellefair.className} ${barlow.className} ${barlow_condensed.className} min-h-screen flex flex-col overflow-hidden`}
-      >
-        <ThemeProvider attribute="class" forcedTheme="dark">
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${bellefair.className} ${barlow.className} ${barlow_condensed.className} min-h-screen flex flex-col overflow-hidden`}
+        >
+          <ThemeProvider attribute="class" forcedTheme="dark">
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

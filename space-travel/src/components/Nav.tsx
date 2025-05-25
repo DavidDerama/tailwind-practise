@@ -1,19 +1,24 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { order: "00", label: "HOME", src: "../", pathName: "/" },
+  { order: "00", label: "HOME", src: "../", pathName: null },
   {
     order: "01",
     label: "DESTINATION",
     src: "/destination",
     pathName: "/destination",
   },
-  { order: "02", label: "CREW", src: "../", pathName: "/crew" },
-  { order: "03", label: "TECHNOLOGY", src: "../", pathName: "/technology" },
+  { order: "02", label: "CREW", src: "/crew", pathName: "/crew" },
+  {
+    order: "03",
+    label: "TECHNOLOGY",
+    src: "/technology",
+    pathName: "/technology",
+  },
 ];
 
 export default function Nav() {
@@ -23,8 +28,10 @@ export default function Nav() {
       <li
         key={order}
         className={cn(
-          "min-h-[96px] flex items-center justify-center border-b-2 border-transparent",
-          pathname === pathName && "border-white"
+          "min-h-[96px] flex items-center justify-center border-b-2 border-transparent hover:border-white",
+          pathname.includes(pathName!)
+            ? "border-white"
+            : !pathName && pathname.length === 1 && "border-white"
         )}
       >
         <Link href={src} className="flex gap-2 tracking-[2px]">
