@@ -33,7 +33,7 @@ export default function PlanetInfoDisplay({ slug }: PlanetInfoDisplayProps) {
   });
 
   return (
-    <div className="flex flex-col h-full gap-0 lg:flex-row lg:gap-8">
+    <div className="flex flex-col h-full gap-0 px-1 lg:flex-row lg:gap-8">
       <PlanetDisplay slug={slug} />
       <div className="flex flex-col items-start justify-center h-full gap-10 lg:px-[47px] mx-auto lg:mx-0 max-w-[500px]">
         <nav className="mx-auto lg:mx-0">

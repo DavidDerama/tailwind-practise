@@ -46,7 +46,7 @@ export default function CrewInfoDisplay({ slug }: CrewInfoDisplay) {
   });
 
   return (
-    <div className="flex flex-col h-full gap-0 lg:flex-row lg:gap-8 lg:[792px] overflow-hidden">
+    <div className="flex flex-col h-full gap-0 lg:flex-row lg:gap-8 lg:[792px]">
       <div className="relative flex flex-col items-start justify-center flex-1 h-full gap-10 py-10 mx-auto lg:mx-0 lg:py-0 max-w-[400px] lg:max-w-screen-lg">
         <div className="flex flex-col items-center gap-6 lg:items-start">
           <h2 className="flex flex-col gap-4 text-5xl text-left uppercase font-title lg:text-center ">
@@ -59,7 +59,7 @@ export default function CrewInfoDisplay({ slug }: CrewInfoDisplay) {
           </h2>
           <CrewMemberDescription crewMemberName={crewMemberName} />
         </div>
-        <nav className="absolute bottom-0 -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2">
+        <nav className="absolute -translate-x-1/2 bottom-1 lg:translate-x-0 lg:left-0 left-1/2">
           <ul className="flex gap-4 lg:gap-10">{linkEl}</ul>
         </nav>
       </div>

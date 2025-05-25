@@ -10,7 +10,7 @@ export default function Content({ children, className }: ContentProps) {
   return (
     <section
       className={cn(
-        "w-full max-w-[1100px] mx-auto pb-[128px] px-10 xl:px-0 lg:h-[632px]",
+        "w-full max-w-[1100px] mx-auto pb-10 px-10 xl:px-0 lg:h-[60vh]",
         className
       )}
     >

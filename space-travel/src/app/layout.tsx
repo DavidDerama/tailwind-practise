@@ -41,7 +41,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <body
-          className={`${bellefair.className} ${barlow.className} ${barlow_condensed.className} min-h-screen flex flex-col overflow-hidden`}
+          className={`${bellefair.className} ${barlow.className} ${barlow_condensed.className} min-h-screen flex flex-col overflow-x-hidden`}
         >
           <ThemeProvider attribute="class" forcedTheme="dark">
             {children}
