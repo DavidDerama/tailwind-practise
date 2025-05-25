@@ -34,7 +34,7 @@ export default function CrewInfoDisplay({ slug }: CrewInfoDisplay) {
         <Link href={src}>
           <div
             className={cn(
-              "bg-primary size-3 lg:size-4 rounded-full hover:bg-primary",
+              "bg-primary size-3 lg:size-4 rounded-full hover:bg-primary hover:opacity-100",
               src.includes(slug!) || (!slug && src === "/crew")
                 ? "bg-primary"
                 : "opacity-20"
