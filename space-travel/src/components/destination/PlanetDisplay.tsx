@@ -6,11 +6,12 @@ type PlanetDisplayProps = {
 };
 
 export default function PlanetDisplay({ slug }: PlanetDisplayProps) {
-  const contentData = data.destinations;
+  const { destinations } = data;
 
   const imageSrc = !slug
-    ? contentData[0].images.webp
-    : contentData.find((item) => item.name.toLowerCase() === slug)?.images.webp;
+    ? destinations[0].images.webp
+    : destinations.find((item) => item.name.toLowerCase() === slug)?.images
+        .webp;
 
   return (
     <div className="flex items-center justify-center py-8 lg:py-0">

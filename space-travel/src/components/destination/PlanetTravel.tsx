@@ -5,11 +5,11 @@ type PlanetTravelProps = {
 import data from "@/lib/content.json";
 
 export default function PlanetTravel({ slug }: PlanetTravelProps) {
-  const contentData = data.destinations;
+  const { destinations } = data;
 
   const travelInfo = !slug
-    ? contentData[0]
-    : contentData.find((item) => item.name.toLowerCase() === slug);
+    ? destinations[0]
+    : destinations.find((item) => item.name.toLowerCase() === slug);
 
   return (
     <div className="flex w-full pt-10 border-t border-[#979797]">

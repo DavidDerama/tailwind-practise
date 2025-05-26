@@ -17,7 +17,7 @@ import data from "@/lib/content.json";
 import CrewMemberDescription from "./CrewMemberDescription";
 
 export default function CrewInfoDisplay({ slug }: CrewInfoDisplay) {
-  const contentData = data.crew;
+  const { crew } = data;
 
   const crewMemberName = slug
     ?.split("-")
@@ -25,8 +25,8 @@ export default function CrewInfoDisplay({ slug }: CrewInfoDisplay) {
     .join(" ");
 
   const memberRole = !slug
-    ? contentData[0].role
-    : contentData.find((item) => item.name === crewMemberName)?.role;
+    ? crew[0].role
+    : crew.find((item) => item.name === crewMemberName)?.role;
 
   const linkEl = links.map(({ id, src }) => {
     return (

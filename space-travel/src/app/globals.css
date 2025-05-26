@@ -69,6 +69,6 @@
 
 @media (min-width: 1024px) {
   .crew-image {
-    mask-image: linear-gradient(to top, transparent, black 30%);
+    mask-image: linear-gradient(to top, transparent, #0b0e17 30%);
   }
 }

@@ -5,11 +5,12 @@ type PlanetTextProps = {
 import data from "@/lib/content.json";
 
 export default function PlanetDescription({ slug }: PlanetTextProps) {
-  const contentData = data.destinations;
+  const { destinations } = data;
 
   const descriptionText = !slug
-    ? contentData[0].description
-    : contentData.find((item) => item.name.toLowerCase() === slug)?.description;
+    ? destinations[0].description
+    : destinations.find((item) => item.name.toLowerCase() === slug)
+        ?.description;
   return (
     <p className="text-center text-accentColor lg:text-left">
       {descriptionText}
